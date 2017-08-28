@@ -89,6 +89,10 @@
 
     <include layout="@layout/in_information_work"/>
 
+    <!-- 紧急联系人-->
+
+    <include layout="@layout/in_information_urgent"/>
+
     <com.jyh.com.jyh.View.MyButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

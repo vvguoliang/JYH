@@ -42,6 +42,12 @@
     <string name="loan_name_loan_personal_information_work_new">发薪日</string>
     <string name="loan_name_loan_personal_information_work_phone">单位电话</string>
     <string name="loan_name_loan_personal_information_work_pho">选填 可提高通过率</string>
+    <string name="loan_name_loan_personal_information_urgent_relatives">直系亲属</string>
+    <string name="loan_name_loan_personal_information_urgent_name">姓名</string>
+    <string name="loan_name_loan_personal_information_urgent_nam">请选择亲属联系人</string>
+    <string name="loan_name_loan_personal_information_urgent_phone">手机号码</string>
+    <string name="loan_name_loan_personal_information_urgent_colleague">同事朋友</string>
     <string name="loan_name_loan_number">1234567890</string>
     <string name="loan_name_loan_qq_number">请输入您的QQ号码</string>
+    <string name="loan_name_loan_select">请选择</string>
 </resources>

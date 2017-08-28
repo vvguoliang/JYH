@@ -2,7 +2,6 @@ package com.jyh.com.jyh.Activity;
 
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.view.View;
 import android.widget.TextView;

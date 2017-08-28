@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <com.jyh.com.jyh.View.MyTextview
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_10dp"
+            android:background="@color/white"
+            android:padding="@dimen/common_10dp"
+            android:text="@string/loan_name_loan_select"
+            android:textColor="@color/common_blue"
+            android:textSize="@dimen/common_14dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_1dp"
+            android:background="@color/common_personal_grey_bot" />
+
+        <ListView
+            android:id="@+id/bottom_dialog_listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none" />
+    </LinearLayout>
+</LinearLayout>

@@ -43,8 +43,9 @@
 
             <ImageView
                 android:id="@+id/information_info_imge"
-                android:layout_width="@dimen/common_18dp"
-                android:layout_height="@dimen/common_18dp"
+                android:layout_width="13dp"
+                android:layout_height="16dp"
+                android:visibility="gone"
                 android:layout_gravity="center"
                 android:layout_marginLeft="@dimen/common_5dp"
                 android:src="@mipmap/ic_personal_data_information_error" />
@@ -206,12 +207,13 @@
                 android:textSize="@dimen/common_14dp" />
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/information_detailed_imge"
+                android:layout_width="13dp"
+                android:layout_height="@dimen/common_18dp"
+                android:visibility="gone"
                 android:layout_gravity="center"
                 android:layout_marginLeft="@dimen/common_5dp"
-                android:src="@mipmap/ic_personal_data_right"
-                android:visibility="invisible" />
+                android:src="@mipmap/ic_personal_data_information_error" />
 
         </LinearLayout>
 
