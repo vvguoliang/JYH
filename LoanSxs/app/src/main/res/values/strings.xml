@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">金银花</string>
+    <string name="channel_name">Dq0001</string>
+    <string name="name_loan">借款</string>
+    <string name="repayment_loan">还款</string>
+    <string name="name_personal_center">我的</string>
+
+    <string name="loan_name_loan_money">借款金额</string>
+    <string name="loan_name_loan_arrival">到账金额</string>
+    <string name="loan_name_loan_day">借款天数</string>
+    <string name="loan_name_loan_money_red">马上领取98元新人现金红包</string>
+    <string name="loan_name_loan_should_also">到期应还:</string>
+    <string name="loan_name_loan_next_step">下一步</string>
+    <string name="loan_name_loan_charge">服务费:</string>
+    <string name="loan_name_loan_coupon">优惠券:</string>
+    <string name="loan_name_loan_interest">借款利息:</string>
+    <string name="loan_name_loan_student">不向学生提供服务</string>
+    <string name="loan_name_loan_fastest_loan">温馨提示:完成以下认证,最快10分钟完成放贷</string>
+    <string name="loan_name_loan_personal_data">个人资料</string>
+    <string name="loan_name_loan_personal_information">个人资料</string>
+    <string name="loan_name_loan_personal_effective">请保证个人信息真实有效</string>
+    <string name="loan_name_loan_personal_no_authentication">未认证</string>
+    <string name="loan_name_loan_personal_authentication">已填写</string>
+    <string name="loan_name_loan_personal_information_info">个人信息</string>
+    <string name="loan_name_loan_personal_information_work">工作信息</string>
+    <string name="loan_name_loan_personal_information_contacts">紧急联系人</string>
+    <string name="loan_name_loan_personal_information_info_qq">QQ号码</string>
+    <string name="loan_name_loan_personal_information_info_education">学历</string>
+    <string name="loan_name_loan_personal_information_info_city">现居城市</string>
+    <string name="loan_name_loan_personal_information_info_province">现居省份</string>
+    <string name="loan_name_loan_personal_information_info_detailed">详细地址</string>
+    <string name="loan_name_loan_personal_information_info_det">请输入您的详细地址</string>
+    <string name="loan_name_loan_personal_information_info_marriage">婚姻状况</string>
+    <string name="loan_name_loan_personal_information_work_company">单位名称</string>
+    <string name="loan_name_loan_personal_information_work_comp">请输入单位名称</string>
+    <string name="loan_name_loan_personal_information_work_province">单位所在省</string>
+    <string name="loan_name_loan_personal_information_work_city">单位所在市</string>
+    <string name="loan_name_loan_personal_information_work_detailed">单位详细地址</string>
+    <string name="loan_name_loan_personal_information_work_det">区/街道/号</string>
+    <string name="loan_name_loan_personal_information_work_occupation">职业</string>
+    <string name="loan_name_loan_personal_information_work_income">月收入</string>
+    <string name="loan_name_loan_personal_information_work_new">发薪日</string>
+    <string name="loan_name_loan_personal_information_work_phone">单位电话</string>
+    <string name="loan_name_loan_personal_information_work_pho">选填 可提高通过率</string>
+    <string name="loan_name_loan_number">1234567890</string>
+    <string name="loan_name_loan_qq_number">请输入您的QQ号码</string>
+</resources>

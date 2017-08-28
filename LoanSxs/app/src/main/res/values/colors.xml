@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="common_grey">#EBE9E9</color>
+    <color name="common_red">#FD3837</color>
+    <color name="common_grey_text">#929292</color>
+    <color name="common_grey_data">#5E5E5E</color>
+    <color name="common_orange">#F56422</color>
+    <color name="common_beige">#FDE9CB</color>
+    <color name="common_personal_grey">#7D7E7D</color>
+    <color name="common_personal_grey_bot">#AFB0AF</color>
+    <color name="common_personal_authentication">#75C328</color>
+    <color name="common_personal">#F6712E</color>
+    <color name="common_personal_information">#EAE9EA</color>
+    <color name="common_personal_information_line">#F45815</color>
+    <color name="common_personal_information_text">#8C8B8C</color>
+</resources>

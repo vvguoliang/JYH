@@ -1,0 +1,106 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId rootProject.ext.applicationId
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        multiDexEnabled true
+
+        ndk {
+            //选择要添加的对应cpu类型的.so库
+            abiFilters 'armeabi', 'armeabi-v7a', 'armeabi-v8a'
+            // 还可以添加
+            //'x86', 'x86_64', 'mips', 'mips64'
+        }
+    }
+
+    buildTypes {
+
+        debug {
+            debuggable true
+            jniDebuggable true
+            zipAlignEnabled true
+            minifyEnabled false
+            shrinkResources false
+        }
+
+
+        release {
+            debuggable false
+            jniDebuggable false
+            zipAlignEnabled true
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles 'proguard-rules.pro'
+            //打包命名规则
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                        def fileName = "${variant.productFlavors[0].name}_v${variant.versionName}_${releaseTime()}.apk"
+                        output.outputFile = new File(outputFile.parent, fileName)
+                    }
+                }
+            }
+        }
+    }
+    productFlavors {
+        Loansxs {
+            //每个环境包名
+            applicationId "com.jyh.com.jyh"
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "@string/channel_name",
+                                    app_name           : "@string/app_name",
+                                    app_icon           : "@mipmap/ic_launcher"]
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            resources.srcDirs = ['src/main/resources', 'libs']
+            res.srcDirs = ['src/main/res', 'src/main/res/color']
+        }
+    }
+
+    lintOptions {
+        //lint 遇到 error 时继续 构建
+        abortOnError false
+        //build release 版本 时 开启lint 检测
+        checkReleaseBuilds false
+        // 防止在发布的时候出现因MissingTranslation导致Build Failed!
+        disable 'MissingTranslation'
+    }
+    //移除lint检查的error
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    //提升编译性能
+    dexOptions {
+        javaMaxHeapSize "4g"
+        preDexLibraries = false
+    }
+
+}
+
+//系统时间
+def static releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    //noinspection GradleCompatible
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:support-v4:25.3.1'
+    //应用OKhttp 中的3.2.0版本
+    compile 'com.squareup.okhttp3:okhttp:3.7.0'
+    compile 'com.github.bumptech.glide:glide:4.0.0-RC1'
+    //recyclerview 框架
+    compile 'com.android.support:recyclerview-v7:25.2.0'
+}

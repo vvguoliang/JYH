@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_48dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/loan_title_image"
+            android:layout_width="@dimen/common_20dp"
+            android:layout_height="@dimen/common_20dp"
+            android:layout_marginLeft="@dimen/common_10dp"
+            android:src="@mipmap/ic_back"
+            android:visibility="gone" />
+
+        <com.jyh.com.jyh.View.MyTextview
+            android:id="@+id/loan_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_18dp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_1dp"
+        android:background="@color/common_grey" />
+
+</LinearLayout>
