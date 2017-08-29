@@ -10,15 +10,16 @@ import android.os.Message;
 import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.AdapterView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import com.jyh.com.jyh.Activity.PersonalDataActivity;
 import com.jyh.com.jyh.Adapter.BottomDialogListviewAdapter;
 import com.jyh.com.jyh.R;
 import com.jyh.com.jyh.Utils.AppUtil;
+import com.jyh.com.jyh.Utils.DisplayUtils;
 import com.jyh.com.jyh.Utils.SharedPreferencesUtils;
 import com.jyh.com.jyh.View.dialogUtils.BottomDialog;
 
@@ -69,10 +70,11 @@ public class DialogUtils {
                            List<Map<String, Object>> list) {
         final BottomDialog bottomDialog = new BottomDialog( context, R.layout.dialog_buttom_listview );
         bottomDialog.getWindow().setWindowAnimations( R.style.AnimBottom );
-        bottomDialog.setWidthHeight( AppUtil.getInstance().Dispay( context )[0], 0 );
+        bottomDialog.setWidthHeight( AppUtil.getInstance().Dispay( context )[0],
+                DisplayUtils.dip2px( context, AppUtil.getInstance().Dispay( context )[1] / 6 ) );
         bottomDialog.getWindow().setGravity( Gravity.BOTTOM );
 
-        List<Map<String, Object>> mapList;
+        final List<Map<String, Object>> mapList;
         String stringa = SharedPreferencesUtils.get( context, name, "" ).toString();
         if (!TextUtils.isEmpty( stringa )) {
             mapList = SharedPreferencesUtils.getInfo( context, stringa );
@@ -82,7 +84,7 @@ public class DialogUtils {
             for (int i = 0; mapList.size() > i; i++) {
                 if (!TextUtils.isEmpty( nameStinrg ) && mapList.get( i ).get( "name" ).equals( nameStinrg )) {
                     mapList.get( i ).put( "boolean", "1" );
-                }else{
+                } else {
                     mapList.get( i ).put( "boolean", "2" );
                 }
             }
@@ -93,17 +95,16 @@ public class DialogUtils {
         BottomDialogListviewAdapter bottomDialogListviewAdapter = new BottomDialogListviewAdapter( context, mapList );
         bottom_dialog_listView.setAdapter( bottomDialogListviewAdapter );
         bottomDialogListviewAdapter.notifyDataSetChanged();
-        final List<Map<String, Object>> finalListViewEntities = mapList;
         bottom_dialog_listView.setOnItemClickListener( new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                if (finalListViewEntities != null && finalListViewEntities.size() > 0) {
-                    finalListViewEntities.get( i ).put( "boolean", "1" );
-                    String strings = SharedPreferencesUtils.saveInfo( context, finalListViewEntities );
+                if (mapList != null && mapList.size() > 0) {
+                    mapList.get( i ).put( "boolean", "1" );
+                    String strings = SharedPreferencesUtils.saveInfo( context, mapList );
                     SharedPreferencesUtils.put( context, name, strings );
                     Message message = new Message();
                     message.what = magint;
-                    message.obj = finalListViewEntities.get( i ).get( "name" );
+                    message.obj = mapList.get( i ).get( "name" );
                     mHanler.sendMessage( message );
                     bottomDialog.onItemClick( adapterView, view, i, l );
                 }

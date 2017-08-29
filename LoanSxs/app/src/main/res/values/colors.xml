@@ -18,4 +18,6 @@
     <color name="common_personal_information_text">#8C8B8C</color>
     <color name="common_blue">#98A2A6</color>
     <color name="common_blue_text">#7D8791</color>
+    <color name="common_sesame_text">#959595</color>
+    <color name="common_sesame_hint_text">#C8C8C8</color>
 </resources>

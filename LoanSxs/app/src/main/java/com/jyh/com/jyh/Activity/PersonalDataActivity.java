@@ -53,7 +53,7 @@ public class PersonalDataActivity extends BaseActivity implements View.OnClickLi
 
     @Override
     protected void findViewById() {
-        TextView loan_title = (TextView) findViewById( R.id.loan_title );
+        TextView loan_title = findViewById( R.id.loan_title );
         loan_title.setText( this.getString( R.string.loan_name_loan_personal_data ) );
         findViewById( R.id.loan_title_image ).setOnClickListener( this );
         findViewById( R.id.loan_title_image ).setVisibility( View.VISIBLE );
@@ -68,7 +68,7 @@ public class PersonalDataActivity extends BaseActivity implements View.OnClickLi
 
         mHandler = new Handler();
 
-        mRecyclerView = (RefreshRecyclerView) findViewById( R.id.recycler_view );
+        mRecyclerView = findViewById( R.id.recycler_view );
         mRecyclerView.setSwipeRefreshColors( 0xFF437845, 0xFFE44F98, 0xFF2FAC21 );
         mRecyclerView.setLayoutManager( new LinearLayoutManager( this ) );
         mRecyclerView.setAdapter( recyclerAdapter );
@@ -119,10 +119,10 @@ public class PersonalDataActivity extends BaseActivity implements View.OnClickLi
 
     public PersonalDataEntity[] getVirtualData() {
         return new PersonalDataEntity[]{
-                new PersonalDataEntity( R.mipmap.ic_personal_data_userinfo, "个人信息", "请保证个人信息真实有效", "1", "" ),
-                new PersonalDataEntity( R.mipmap.ic_personal_data_zhima, "芝麻认证", "请先完成芝麻授信", "2", "" ),
-                new PersonalDataEntity( R.mipmap.ic_personal_data_carriers, "手机运营商", "认证后有助于提高审核通过率", "2", "" ),
-                new PersonalDataEntity( R.mipmap.ic_personal_data_bindcard, "收款银行卡", "所借款项将发放至该卡中", "2", "" )
+                new PersonalDataEntity( R.mipmap.ic_personal_data_userinfo, "个人信息", "请保证个人信息真实有效", "1", "1" ),
+                new PersonalDataEntity( R.mipmap.ic_personal_data_zhima, "芝麻认证", "请先完成芝麻授信", "2", "2" ),
+                new PersonalDataEntity( R.mipmap.ic_personal_data_carriers, "手机运营商", "认证后有助于提高审核通过率", "2", "3" ),
+                new PersonalDataEntity( R.mipmap.ic_personal_data_bindcard, "收款银行卡", "所借款项将发放至该卡中", "2", "4" )
         };
     }
 }

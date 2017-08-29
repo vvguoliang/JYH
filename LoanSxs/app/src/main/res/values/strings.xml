@@ -50,4 +50,19 @@
     <string name="loan_name_loan_number">1234567890</string>
     <string name="loan_name_loan_qq_number">请输入您的QQ号码</string>
     <string name="loan_name_loan_select">请选择</string>
+    <string name="loan_name_loan_sesame_hint_name">请输入姓名</string>
+    <string name="loan_name_loan_sesame_id">身份证号码</string>
+    <string name="loan_name_loan_sesame_hint_id">请输入身份证号码</string>
+    <string name="loan_name_loan_sesame_real">认证后无法修改,请确保真实</string>
+    <string name="loan_name_loan_sesame_authentication">前往认证</string>
+    <string name="loan_name_loan_sesame">芝麻授权</string>
+    <string name="loan_name_loan_sesame_ing">正在认证...</string>
+    <string name="loan_name_loan_sesame_no">该实名信息已被认证</string>
+    <string name="loan_name_loan_operator_text">运营商认证可能需要2-3分钟,请您耐心等待</string>
+    <string name="loan_name_loan_operator_cmcc">中国移动</string>
+    <string name="loan_name_loan_operator_telecom">中国电信</string>
+    <string name="loan_name_loan_operator_unicom">中国联通</string>
+    <string name="loan_name_loan_operator_service">服务商密码</string>
+    <string name="loan_name_loan_operator_hint_service">请输入服务商密码</string>
+    <string name="loan_name_loan_operator_phone_verification">注册手机号验证</string>
 </resources>

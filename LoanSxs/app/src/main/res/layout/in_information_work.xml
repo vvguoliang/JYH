@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/information_work_scr"
     android:layout_width="match_parent"
-    android:visibility="gone"
+    android:visibility="visible"
     android:layout_height="wrap_content">
 
     <LinearLayout
@@ -46,6 +46,7 @@
                 android:layout_width="@dimen/common_18dp"
                 android:layout_height="@dimen/common_18dp"
                 android:layout_gravity="center"
+                android:visibility="gone"
                 android:layout_marginRight="@dimen/common_5dp"
                 android:src="@mipmap/ic_personal_data_information_error" />
 
@@ -154,7 +155,7 @@
                 android:textSize="@dimen/common_16dp" />
 
             <com.jyh.com.jyh.View.MyEditText
-                android:id="@+id/information_detailed_text"
+                android:id="@+id/information_work_detailed_text"
                 android:layout_width="@dimen/common_0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="@dimen/common_20dp"
@@ -171,6 +172,7 @@
                 android:layout_width="17dp"
                 android:layout_height="@dimen/common_18dp"
                 android:layout_gravity="center"
+                android:visibility="gone"
                 android:layout_marginRight="@dimen/common_5dp"
                 android:src="@mipmap/ic_personal_data_information_error" />
 
@@ -335,8 +337,9 @@
 
             <ImageView
                 android:id="@+id/information_phone_image"
-                android:layout_width="@dimen/common_18dp"
+                android:layout_width="14dp"
                 android:layout_height="@dimen/common_18dp"
+                android:visibility="gone"
                 android:layout_gravity="center"
                 android:layout_marginRight="@dimen/common_5dp"
                 android:src="@mipmap/ic_personal_data_information_error" />

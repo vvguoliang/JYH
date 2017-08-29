@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:visibility="gone">
+    android:visibility="visible">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -87,8 +87,9 @@
 
             <ImageView
                 android:id="@+id/information_urgent_name_image"
-                android:layout_width="12dp"
+                android:layout_width="10dp"
                 android:layout_height="@dimen/common_18dp"
+                android:visibility="gone"
                 android:layout_gravity="center"
                 android:layout_marginRight="@dimen/common_10dp"
                 android:src="@mipmap/ic_personal_data_information_error" />
@@ -224,8 +225,9 @@
 
             <ImageView
                 android:id="@+id/information_urgent_name_colleague_image"
-                android:layout_width="12dp"
+                android:layout_width="8dp"
                 android:layout_height="@dimen/common_18dp"
+                android:visibility="gone"
                 android:layout_gravity="center"
                 android:layout_marginRight="@dimen/common_10dp"
                 android:src="@mipmap/ic_personal_data_information_error" />
@@ -271,7 +273,7 @@
 
             <ImageView
                 android:id="@+id/information_urgent_phone_colleague_image"
-                android:layout_width="@dimen/common_20dp"
+                android:layout_width="17dp"
                 android:layout_height="@dimen/common_20dp"
                 android:layout_gravity="center"
                 android:layout_marginRight="@dimen/common_10dp"

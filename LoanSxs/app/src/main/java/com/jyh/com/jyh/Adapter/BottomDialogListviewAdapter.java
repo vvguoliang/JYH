@@ -58,12 +58,15 @@ public class BottomDialogListviewAdapter extends BaseAdapter {
         } else {
             viewHolder = (ViewHolder) view.getTag();
         }
+        if (i % 2 == 0) {
+            viewHolder.dialog_button_listView_line.setBackgroundColor( Color.parseColor( "#ffffff" ) );
+        } else {
+            viewHolder.dialog_button_listView_line.setBackgroundColor( Color.parseColor( "#F5F5F5" ) );
+        }
         viewHolder.dialog_button_listView_text.setText( list.get( i ).get( "name" ).toString() );
         if (list.get( i ).get( "boolean" ).equals( "1" )) {//选中
-            viewHolder.dialog_button_listView_line.setBackgroundColor( Color.parseColor( "#F5F5F5" ) );
             viewHolder.dialog_button_listView_text.setTextColor( Color.parseColor( "#43A0EB" ) );
         } else {
-            viewHolder.dialog_button_listView_line.setBackgroundColor( Color.parseColor( "#ffffff" ) );
             viewHolder.dialog_button_listView_text.setTextColor( Color.parseColor( "#7D8791" ) );
         }
         return view;

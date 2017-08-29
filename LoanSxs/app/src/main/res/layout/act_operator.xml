@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/common_beige"
+        android:gravity="center"
+        android:padding="@dimen/common_10dp">
+
+        <com.jyh.com.jyh.View.MyTextview
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/loan_name_loan_operator_text"
+            android:textColor="@color/common_red"
+            android:textSize="@dimen/common_14dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/common_10dp">
+
+        <ImageView
+            android:id="@+id/operator_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/common_10dp"
+            android:src="@mipmap/ic_operator_cmcc" />
+
+        <com.jyh.com.jyh.View.MyTextview
+            android:id="@+id/operator_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/common_30dp"
+            android:layout_marginTop="@dimen/common_10dp"
+            android:text="@string/loan_name_loan_operator_cmcc"
+            android:textColor="@color/common_sesame_text"
+            android:textSize="@dimen/common_14dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/common_10dp">
+
+            <com.jyh.com.jyh.View.MyTextview
+                android:layout_width="@dimen/common_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:text="@string/loan_name_loan_personal_information_urgent_phone"
+                android:textColor="@color/common_sesame_text"
+                android:textSize="@dimen/common_14dp" />
+
+            <com.jyh.com.jyh.View.MyEditText
+                android:id="@+id/operator_phone_text"
+                android:layout_width="@dimen/common_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:lines="1"
+                android:textColor="@color/common_grey_data"
+                android:textSize="@dimen/common_14dp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_0_5dp"
+            android:layout_marginLeft="@dimen/common_10dp"
+            android:layout_marginRight="@dimen/common_10dp"
+            android:layout_marginTop="@dimen/common_10dp"
+            android:background="@color/common_personal_grey_bot" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/common_10dp">
+
+            <com.jyh.com.jyh.View.MyTextview
+                android:layout_width="@dimen/common_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:text="@string/loan_name_loan_operator_service"
+                android:textColor="@color/common_sesame_text"
+                android:textSize="@dimen/common_14dp" />
+
+            <com.jyh.com.jyh.View.MyEditText
+                android:id="@+id/operator_service_text"
+                android:layout_width="@dimen/common_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:hint="@string/loan_name_loan_operator_hint_service"
+                android:lines="1"
+                android:textColor="@color/common_grey_data"
+                android:textColorHint="@color/common_sesame_hint_text"
+                android:textSize="@dimen/common_14dp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_0_5dp"
+            android:layout_marginLeft="@dimen/common_10dp"
+            android:layout_marginRight="@dimen/common_10dp"
+            android:layout_marginTop="@dimen/common_10dp"
+            android:background="@color/common_personal_grey_bot" />
+
+
+        <com.jyh.com.jyh.View.MyButton
+            android:id="@+id/operator_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/common_20dp"
+            android:background="@drawable/button_background_gray_color"
+            android:text="@string/loan_name_loan_sesame_authentication"
+            android:textColor="@color/white"
+            android:textSize="@dimen/common_14dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

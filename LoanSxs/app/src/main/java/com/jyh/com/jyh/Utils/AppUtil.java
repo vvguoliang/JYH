@@ -61,6 +61,12 @@ public class AppUtil {
         return new int[]{screenWidth, screenHeight};
     }
 
+    /**
+     * 定位GPS
+     */
+    public final String LOCATION = "location";
+    public final String LOCATION_ACTION = "locationAction";
+
     public final int MY_PERMISSIONS_REQUEST_CAMERA = 100;//拍照权限
     public final int MY_PERMISSIONS_REQUEST_READ_SD = 101;//读SD卡权限
     public final int MY_PERMISSIONS_REQUEST_WRITE_SK = 102;//写SD卡权限

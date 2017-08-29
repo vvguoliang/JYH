@@ -15,8 +15,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
+            android:padding="@dimen/common_5dp"
             android:textColor="@color/common_blue_text"
-            android:textSize="@dimen/common_14dp" />
+            android:textSize="@dimen/common_18dp" />
 
     </LinearLayout>
 

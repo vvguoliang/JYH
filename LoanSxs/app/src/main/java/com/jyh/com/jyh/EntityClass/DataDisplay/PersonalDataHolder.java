@@ -14,7 +14,9 @@ import com.bumptech.glide.load.DataSource;
 import com.bumptech.glide.load.engine.GlideException;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
+import com.jyh.com.jyh.Activity.OperatorActivity;
 import com.jyh.com.jyh.Activity.PersonalDataInformation;
+import com.jyh.com.jyh.Activity.SesameActivity;
 import com.jyh.com.jyh.EntityClass.PersonalDataEntity;
 import com.jyh.com.jyh.R;
 import com.jyh.com.jyh.RecyclerView.BaseViewHolder;
@@ -73,23 +75,38 @@ public class PersonalDataHolder extends BaseViewHolder<PersonalDataEntity> {
             personal_data_authentication.setText( parent.getContext().getString( R.string.loan_name_loan_personal_no_authentication ) );
             personal_data_authentication.setTextColor( Color.parseColor( "#AFB0AF" ) );
         }
-
     }
 
     //初始化
     @Override
     public void onInitializeView() {
         super.onInitializeView();
-        personal_data_image = (ImageView) findViewById( R.id.personal_data_image );
-        personal_data_information = (TextView) findViewById( R.id.personal_data_information );
-        personal_data_effective = (TextView) findViewById( R.id.personal_data_effective );
-        personal_data_authentication = (TextView) findViewById( R.id.personal_data_authentication );
+        personal_data_image = findViewById( R.id.personal_data_image );
+        personal_data_information = findViewById( R.id.personal_data_information );
+        personal_data_effective = findViewById( R.id.personal_data_effective );
+        personal_data_authentication = findViewById( R.id.personal_data_authentication );
     }
 
     @Override
     public void onItemViewClick(PersonalDataEntity data) {
         super.onItemViewClick( data );
-        Intent intent = new Intent( parent.getContext(), PersonalDataInformation.class );
-        parent.getContext().startActivity( intent );
+        Intent intent;
+        switch (data.getOther()) {
+            case "1":
+                intent = new Intent( parent.getContext(), PersonalDataInformation.class );
+                parent.getContext().startActivity( intent );
+                break;
+            case "2":
+                intent = new Intent( parent.getContext(), SesameActivity.class );
+                parent.getContext().startActivity( intent );
+                break;
+            case "3":
+                intent = new Intent( parent.getContext() , OperatorActivity.class );
+                parent.getContext().startActivity( intent );
+                break;
+            case "4":
+                break;
+        }
+
     }
 }
