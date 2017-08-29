@@ -84,11 +84,11 @@ public class PublicPromptDialog extends Dialog {
             dialog.setCanceledOnTouchOutside( false );
             dialog.setCancelable( false );
 
-            TextView dialog_title = (TextView) layout.findViewById( R.id.dialog_title );
+            TextView dialog_title = layout.findViewById( R.id.dialog_title );
             dialog_title.setText( title );
-            TextView dialog_context = (TextView) layout.findViewById( R.id.dialog_context );
+            TextView dialog_context = layout.findViewById( R.id.dialog_context );
             dialog_context.setText( comtext );
-            Button dialog_button = (Button) layout.findViewById( R.id.dialog_button );
+            Button dialog_button = layout.findViewById( R.id.dialog_button );
             dialog_button.setText( buttonstring );
 
             if (null != itemseButtonClickListener) {

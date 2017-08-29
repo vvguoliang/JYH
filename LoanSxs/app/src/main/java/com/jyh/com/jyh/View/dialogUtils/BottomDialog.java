@@ -6,6 +6,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.AdapterView;
 
 import com.jyh.com.jyh.R;
 
@@ -19,7 +20,7 @@ import java.util.Map;
  */
 @SuppressWarnings("unchecked")
 @SuppressLint("UseSparseArrays")
-public class BottomDialog extends Dialog implements View.OnClickListener {
+public class BottomDialog extends Dialog implements AdapterView.OnItemClickListener{
 	protected View view;
 	protected Map<Integer, View.OnClickListener> map = new HashMap<>();
 	protected int width;
@@ -40,11 +41,11 @@ public class BottomDialog extends Dialog implements View.OnClickListener {
 		this.height = height;
 	}
 
-	public void setOnClick(int viewId, View.OnClickListener onClickListener) {
-		map.put(viewId, onClickListener);
-		View view = findViewById(viewId);
-		view.setOnClickListener(this);
-	}
+//	public void setOnClick(int viewId, View.OnClickListener onClickListener) {
+//		map.put(viewId, onClickListener);
+//		View view = findViewById(viewId);
+//		view.setOnClickListener(this);
+//	}
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -62,10 +63,15 @@ public class BottomDialog extends Dialog implements View.OnClickListener {
 	}
 
 	@Override
-	public void onClick(View v) {
+	public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 		dismiss();
-		if (map.containsKey(v.getId()) && map.get(v.getId()) != null) {
-			map.get(v.getId()).onClick(v);
-		}
 	}
+
+//	@Override
+//	public void onClick(View v) {
+//		dismiss();
+//		if (map.containsKey(v.getId()) && map.get(v.getId()) != null) {
+//			map.get(v.getId()).onClick(v);
+//		}
+//	}
 }

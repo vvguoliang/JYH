@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/dialog_button_listView_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/common_15dp">
+
+        <com.jyh.com.jyh.View.MyTextview
+            android:id="@+id/dialog_button_listView_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/common_blue_text"
+            android:textSize="@dimen/common_14dp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -13,7 +13,6 @@
         <com.jyh.com.jyh.View.MyTextview
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/common_10dp"
             android:background="@color/white"
             android:padding="@dimen/common_10dp"
             android:text="@string/loan_name_loan_select"

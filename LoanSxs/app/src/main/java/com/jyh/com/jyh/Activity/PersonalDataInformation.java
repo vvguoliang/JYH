@@ -1,6 +1,9 @@
 package com.jyh.com.jyh.Activity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -12,6 +15,12 @@ import android.widget.TextView;
 
 import com.jyh.com.jyh.Base.BaseActivity;
 import com.jyh.com.jyh.R;
+import com.jyh.com.jyh.View.DialogUtils;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by vvguoliang on 2017/8/25.
@@ -74,6 +83,8 @@ public class PersonalDataInformation extends BaseActivity implements View.OnClic
     private EditText information_urgent_phone_colleague;
     private ImageView information_urgent_phone_colleague_image;
 
+    private String[] education = new String[]{"小学", "初中", "高中/高职/技校", "大专", "本科", "硕士", "博士"};
+
     private void getFindViewById() {
         information_info_edit = findViewById( R.id.information_info_edit );
         information_info_imge = findViewById( R.id.information_info_imge );
@@ -90,6 +101,7 @@ public class PersonalDataInformation extends BaseActivity implements View.OnClic
 
         information_info_imge.setOnClickListener( this );
         information_detailed_imge.setOnClickListener( this );
+        information_education_lin.setOnClickListener( this );
     }
 
 
@@ -120,6 +132,10 @@ public class PersonalDataInformation extends BaseActivity implements View.OnClic
                 break;
             case R.id.information_detailed_imge:
                 information_detailed_text.setText( "" );
+                break;
+            case R.id.information_education_lin:
+                DialogUtils.getInstance().showDialog( PersonalDataInformation.this, mHandler, 1, "education",
+                        information_education_text.getText().toString(), getListEducation( education ) );
                 break;
         }
 
@@ -206,5 +222,31 @@ public class PersonalDataInformation extends BaseActivity implements View.OnClic
             }
         };
         return textWatcher;
+    }
+
+    @SuppressLint("HandlerLeak")
+    private Handler mHandler = new Handler() {
+
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage( msg );
+            switch (msg.what) {
+                case 1:
+                    information_education_text.setText( msg.obj.toString() );
+                    break;
+            }
+        }
+    };
+
+    private List<Map<String, Object>> getListEducation(String[] education) {
+        List<Map<String, Object>> mapList = new ArrayList<>();
+        for (String anEducation : education) {
+            Map<String, Object> map = new HashMap<>();
+            map.put( "boolean", "2" );
+            map.put( "name", anEducation );
+            mapList.add( map );
+        }
+        return mapList;
+
     }
 }
