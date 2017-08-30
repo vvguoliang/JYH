@@ -23,6 +23,17 @@
         android:orientation="vertical">
 
         <com.jyh.com.jyh.View.MyTextview
+            android:id="@+id/dialog_context_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/common_10dp"
+            android:gravity="center"
+            android:text="@string/repayment_loan"
+            android:textColor="@color/common_personal_grey"
+            android:textSize="@dimen/common_18dp" />
+
+        <com.jyh.com.jyh.View.MyTextview
             android:id="@+id/dialog_context"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

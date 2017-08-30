@@ -20,4 +20,5 @@
     <color name="common_blue_text">#7D8791</color>
     <color name="common_sesame_text">#959595</color>
     <color name="common_sesame_hint_text">#C8C8C8</color>
+    <color name="common_operator_text">#484848</color>
 </resources>

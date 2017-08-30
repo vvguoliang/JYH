@@ -65,4 +65,16 @@
     <string name="loan_name_loan_operator_service">服务商密码</string>
     <string name="loan_name_loan_operator_hint_service">请输入服务商密码</string>
     <string name="loan_name_loan_operator_phone_verification">注册手机号验证</string>
+    <string name="loan_name_loan_operator_unicom_text">温馨提示\n&#160;&#160;联通手机提交认证仅需要服务密码即可\n&#160;&#160;忘记密码可以拨打10010人工客服重置密码\n&#160;&#160;认证需要2-3分钟,请耐心等待\n&#160;&#160;若认证失败,提示"系统繁忙",建议您在不同时间段进行多次尝试\n&#160;&#160;运营商认证失败怎么办?</string>
+
+    <string name="loan_name_loan_operator_cmcc_text">温馨提示\n&#160;&#160;移动手机提交认证仅需要服务密码即可\n&#160;&#160;忘记密码可以拨打10086人工客服重置密码\n&#160;&#160;认证需要2-3分钟,请耐心等待\n&#160;&#160;若认证失败,提示"系统繁忙",建议您在不同时间段进行多次尝试\n&#160;&#160;运营商认证失败怎么办?</string>
+
+    <string name="loan_name_loan_operator_telecom_text">温馨提示\n&#160;&#160;电信手机提交认证仅需要服务密码即可\n&#160;&#160;忘记密码可以拨打10000工客服重置密码\n&#160;&#160;认证需要2-3分钟,请耐心等待\n&#160;&#160;若认证失败,提示"系统繁忙",建议您在不同时间段进行多次尝试\n&#160;&#160;运营商认证失败怎么办?</string>
+
+    <string name="loan_name_loan_bank_effective">请填写本人的银行卡信息</string>
+    <string name="loan_name_loan_bank_personal">持卡人</string>
+    <string name="loan_name_loan_bank_opening">开户行</string>
+    <string name="loan_name_loan_bank_number">银行卡号</string>
+    <string name="loan_name_loan_bank_hint_number">请输入您的银行卡号</string>
+    <string name="loan_name_loan_bank">绑定银行卡</string>
 </resources>

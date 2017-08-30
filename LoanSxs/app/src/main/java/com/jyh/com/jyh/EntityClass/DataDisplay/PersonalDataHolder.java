@@ -14,6 +14,7 @@ import com.bumptech.glide.load.DataSource;
 import com.bumptech.glide.load.engine.GlideException;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
+import com.jyh.com.jyh.Activity.BindBankActivity;
 import com.jyh.com.jyh.Activity.OperatorActivity;
 import com.jyh.com.jyh.Activity.PersonalDataInformation;
 import com.jyh.com.jyh.Activity.SesameActivity;
@@ -105,6 +106,8 @@ public class PersonalDataHolder extends BaseViewHolder<PersonalDataEntity> {
                 parent.getContext().startActivity( intent );
                 break;
             case "4":
+                intent = new Intent( parent.getContext() , BindBankActivity.class );
+                parent.getContext().startActivity( intent );
                 break;
         }
 

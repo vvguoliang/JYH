@@ -8,6 +8,8 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.Display;
 import android.view.View;
 import android.view.WindowManager;
@@ -20,6 +22,10 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.NetworkInterface;
 import java.net.SocketException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by vvguoliang on 2017/6/24.
@@ -59,6 +65,43 @@ public class AppUtil {
         int screenWidth = display.getWidth();
         int screenHeight = display.getHeight();
         return new int[]{screenWidth, screenHeight};
+    }
+
+    public TextWatcher getTextw(final View view) {
+
+        TextWatcher textWatcher = new TextWatcher() {
+
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                if (editable.length() > 0) {
+                    view.setVisibility( View.VISIBLE );
+                } else {
+                    view.setVisibility( View.GONE );
+                }
+            }
+        };
+        return textWatcher;
+    }
+
+    public List<Map<String, Object>> getList(String[] stringline) {
+        List<Map<String, Object>> mapList = new ArrayList<>();
+        for (String anEducation : stringline) {
+            Map<String, Object> map = new HashMap<>();
+            map.put( "boolean", "2" );
+            map.put( "name", anEducation );
+            mapList.add( map );
+        }
+        return mapList;
     }
 
     /**

@@ -13,6 +13,7 @@ import com.jyh.com.jyh.R;
 import com.jyh.com.jyh.RecyclerView.Action;
 import com.jyh.com.jyh.RecyclerView.RefreshRecyclerView;
 import com.jyh.com.jyh.Utils.ImmersiveUtils;
+import com.jyh.com.jyh.View.DialogUtils;
 
 /**
  * Created by vvguoliang on 2017/8/24.
@@ -94,7 +95,8 @@ public class PersonalDataActivity extends BaseActivity implements View.OnClickLi
                 getData( true );
             }
         } );
-
+        DialogUtils.getInstance().getDialogSuccess( this, "",
+                "恭喜,您已完成认证\n现在申请借款,最快十分钟即刻到账", "立即借款", "认证完毕" );
     }
 
     public void getData(final boolean isRefresh) {
@@ -108,10 +110,7 @@ public class PersonalDataActivity extends BaseActivity implements View.OnClickLi
                     mRecyclerView.dismissSwipeRefresh();
                     mRecyclerView.getRecyclerView().scrollToPosition( 0 );
                 } else {
-//                    recyclerAdapter.addAll(getVirtualData());
-//                    if (page >= 3) {
                     mRecyclerView.showNoMore();
-//                    }
                 }
             }
         }, 1500 );

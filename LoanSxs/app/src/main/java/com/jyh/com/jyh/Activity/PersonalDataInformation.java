@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import com.jyh.com.jyh.Base.BaseActivity;
 import com.jyh.com.jyh.R;
+import com.jyh.com.jyh.Utils.AppUtil;
 import com.jyh.com.jyh.Utils.ImmersiveUtils;
 import com.jyh.com.jyh.View.DialogUtils;
 
@@ -73,6 +74,9 @@ public class PersonalDataInformation extends BaseActivity implements View.OnClic
     private String[] occupation = new String[]{"销售", "维修工程", "服务员", "营业员", "司机", "工程师", "厨师", "文员", "理发师", "教练", "来购员",
             "客服", "会计", "教师", "快递员", "医生", "网店店长", "律师", "翻译", "编辑", "自由职业", "其他"};
     private String[] income = new String[]{"小于1000元", "1000～2000元", "2000～4000元", "4000～6000元", "6000～10000元", "10000以上"};
+    private String[] monnew = new String[]{"每月1号", "每月2号", "每月3号", "每月4号", "每月5号", "每月6号","每月7号","每月8号","每月9号",
+            "每月10号","每月11号","每月12号","每月13号","每月14号","每月15号","每月16号","每月17号","每月18号","每月19号","每月20号","每月21号",
+            "每月22号","每月23号","每月24号","每月25号","每月26号","每月27号","每月28号","每月29号","每月30号","每月31号"};
     private String[] relatives = new String[]{"父母", "配偶", "兄弟姐妹"};
     private String[] colleague = new String[]{"同学", "同事", "朋友"};
 
@@ -110,19 +114,19 @@ public class PersonalDataInformation extends BaseActivity implements View.OnClic
                 break;
             case R.id.information_education_lin:
                 DialogUtils.getInstance().showDialog( PersonalDataInformation.this, mHandler, 1, "education",
-                        information_education_text.getText().toString(), getList( education ) );
+                        information_education_text.getText().toString(), AppUtil.getInstance().getList( education ) );
                 break;
             case R.id.information_province_lin:
                 DialogUtils.getInstance().showDialog( PersonalDataInformation.this, mHandler, 2, "province",
-                        information_province_text.getText().toString(), getList( province ) );
+                        information_province_text.getText().toString(), AppUtil.getInstance().getList( province ) );
                 break;
             case R.id.information_city_lin:
                 DialogUtils.getInstance().showDialog( PersonalDataInformation.this, mHandler, 3, "city",
-                        information_city_text.getText().toString(), getList( province ) );
+                        information_city_text.getText().toString(), AppUtil.getInstance().getList( province ) );
                 break;
             case R.id.information_marriage_lin:
                 DialogUtils.getInstance().showDialog( PersonalDataInformation.this, mHandler, 4, "marriage",
-                        information_marriage_text.getText().toString(), getList( marriage ) );
+                        information_marriage_text.getText().toString(), AppUtil.getInstance().getList( marriage ) );
                 break;
             case R.id.information_work_company_image:
                 information_work_company_edit.setText( "" );
@@ -135,23 +139,23 @@ public class PersonalDataInformation extends BaseActivity implements View.OnClic
                 break;
             case R.id.information_work_province_lin:
                 DialogUtils.getInstance().showDialog( PersonalDataInformation.this, mHandler, 5, "work_province",
-                        information_work_company_province_text.getText().toString(), getList( province ) );
+                        information_work_company_province_text.getText().toString(), AppUtil.getInstance().getList( province ) );
                 break;
             case R.id.information_work_city_lin:
                 DialogUtils.getInstance().showDialog( PersonalDataInformation.this, mHandler, 6, "work_city",
-                        information_work_city_text.getText().toString(), getList( province ) );
+                        information_work_city_text.getText().toString(), AppUtil.getInstance().getList( province ) );
                 break;
             case R.id.information_work_occupation_lin:
                 DialogUtils.getInstance().showDialog( PersonalDataInformation.this, mHandler, 7, "work_occupation",
-                        information_work_occupation_text.getText().toString(), getList( occupation ) );
+                        information_work_occupation_text.getText().toString(), AppUtil.getInstance().getList( occupation ) );
                 break;
             case R.id.information_income_lin:
                 DialogUtils.getInstance().showDialog( PersonalDataInformation.this, mHandler, 8, "income",
-                        information_income_text.getText().toString(), getList( income ) );
+                        information_income_text.getText().toString(), AppUtil.getInstance().getList( income ) );
                 break;
             case R.id.information_new_lin:
                 DialogUtils.getInstance().showDialog( PersonalDataInformation.this, mHandler, 9, "new",
-                        information_new_text.getText().toString(), getList( income ) );
+                        information_new_text.getText().toString(), AppUtil.getInstance().getList( monnew ) );
                 break;
             case R.id.information_urgent_name_image:
                 information_urgent_name_edit.setText( "" );
@@ -167,14 +171,13 @@ public class PersonalDataInformation extends BaseActivity implements View.OnClic
                 break;
             case R.id.information_urgent_relatives_line:
                 DialogUtils.getInstance().showDialog( PersonalDataInformation.this, mHandler, 10, "urgent_relatives",
-                        information_urgent_relatives.getText().toString(), getList( relatives ) );
+                        information_urgent_relatives.getText().toString(), AppUtil.getInstance().getList( relatives ) );
                 break;
             case R.id.information_urgent_colleague_line:
                 DialogUtils.getInstance().showDialog( PersonalDataInformation.this, mHandler, 11, "urgent_colleague",
-                        information_urgent_colleague_text.getText().toString(), getList( colleague ) );
+                        information_urgent_colleague_text.getText().toString(), AppUtil.getInstance().getList( colleague ) );
                 break;
         }
-
     }
 
     @Override
@@ -250,8 +253,8 @@ public class PersonalDataInformation extends BaseActivity implements View.OnClic
         information_info_imge.setOnClickListener( this );
         information_detailed_imge.setOnClickListener( this );
 
-        information_info_edit.addTextChangedListener( getTextw( information_info_imge ) );
-        information_detailed_text.addTextChangedListener( getTextw( information_detailed_imge ) );
+        information_info_edit.addTextChangedListener( AppUtil.getInstance().getTextw( information_info_imge ) );
+        information_detailed_text.addTextChangedListener( AppUtil.getInstance().getTextw( information_detailed_imge ) );
 
         findViewById( R.id.information_education_lin ).setOnClickListener( this );
         findViewById( R.id.information_province_lin ).setOnClickListener( this );
@@ -272,9 +275,9 @@ public class PersonalDataInformation extends BaseActivity implements View.OnClic
         information_phone_image = findViewById( R.id.information_phone_image );
         information_income_text = findViewById( R.id.information_income_text );
 
-        information_work_company_edit.addTextChangedListener( getTextw( information_work_company_image ) );
-        information_work_detailed_text.addTextChangedListener( getTextw( information_detailed_image ) );
-        information_phone_edit.addTextChangedListener( getTextw( information_phone_image ) );
+        information_work_company_edit.addTextChangedListener( AppUtil.getInstance().getTextw( information_work_company_image ) );
+        information_work_detailed_text.addTextChangedListener( AppUtil.getInstance().getTextw( information_detailed_image ) );
+        information_phone_edit.addTextChangedListener( AppUtil.getInstance().getTextw( information_phone_image ) );
 
         information_work_company_image.setOnClickListener( this );
         information_detailed_image.setOnClickListener( this );
@@ -297,8 +300,8 @@ public class PersonalDataInformation extends BaseActivity implements View.OnClic
         information_urgent_name_colleague_image = findViewById( R.id.information_urgent_name_colleague_image );
         information_urgent_phone_colleague = findViewById( R.id.information_urgent_phone_colleague );
 
-        information_urgent_name_edit.addTextChangedListener( getTextw( information_urgent_name_image ) );
-        information_urgent_name_colleague.addTextChangedListener( getTextw( information_urgent_name_colleague_image ) );
+        information_urgent_name_edit.addTextChangedListener( AppUtil.getInstance().getTextw( information_urgent_name_image ) );
+        information_urgent_name_colleague.addTextChangedListener( AppUtil.getInstance().getTextw( information_urgent_name_colleague_image ) );
 
         information_urgent_name_image.setOnClickListener( this );
         information_urgent_name_colleague_image.setOnClickListener( this );
@@ -309,31 +312,6 @@ public class PersonalDataInformation extends BaseActivity implements View.OnClic
 
     }
 
-    private TextWatcher getTextw(final View view) {
-
-        TextWatcher textWatcher = new TextWatcher() {
-
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-                if (editable.length() > 0) {
-                    view.setVisibility( View.VISIBLE );
-                } else {
-                    view.setVisibility( View.GONE );
-                }
-            }
-        };
-        return textWatcher;
-    }
 
     @SuppressLint("HandlerLeak")
     private Handler mHandler = new Handler() {
@@ -380,14 +358,4 @@ public class PersonalDataInformation extends BaseActivity implements View.OnClic
         }
     };
 
-    private List<Map<String, Object>> getList(String[] stringline) {
-        List<Map<String, Object>> mapList = new ArrayList<>();
-        for (String anEducation : education) {
-            Map<String, Object> map = new HashMap<>();
-            map.put( "boolean", "2" );
-            map.put( "name", anEducation );
-            mapList.add( map );
-        }
-        return mapList;
-    }
 }

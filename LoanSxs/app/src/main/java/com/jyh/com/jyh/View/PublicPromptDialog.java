@@ -5,6 +5,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.support.annotation.NonNull;
+import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,6 +17,7 @@ import android.widget.TextView;
 
 import com.jyh.com.jyh.R;
 import com.jyh.com.jyh.Utils.DisplayUtils;
+import com.jyh.com.jyh.Utils.ToatUtils;
 
 /**
  * Created by vvguoliang on 2017/6/28.
@@ -34,6 +36,7 @@ public class PublicPromptDialog extends Dialog {
         private String comtext;
         private String buttonstring;
         private OnClickListener itemseButtonClickListener;
+        private String messe;
 
         public Builder(Context context) {
             this.context = context;
@@ -47,6 +50,10 @@ public class PublicPromptDialog extends Dialog {
          */
         public Builder setTitle(String title) {
             this.title = title;
+            return this;
+        }
+        public Builder setMesse(String messe) {
+            this.messe = messe;
             return this;
         }
 
@@ -85,7 +92,19 @@ public class PublicPromptDialog extends Dialog {
             dialog.setCancelable( false );
 
             TextView dialog_title = layout.findViewById( R.id.dialog_title );
-            dialog_title.setText( title );
+            TextView dialog_context_text = layout.findViewById( R.id.dialog_context_text );
+
+            if(!TextUtils.isEmpty( messe )){
+                dialog_title.setText( "" );
+                dialog_title.setBackgroundResource( R.mipmap.ic_personal_uthentication_success );
+                dialog_context_text.setVisibility( View.VISIBLE );
+                dialog_context_text.setText( messe );
+            }else{
+                dialog_title.setText( title );
+                dialog_title.setBackgroundResource( R.drawable.dialog_background_up );
+                dialog_context_text.setVisibility( View.GONE );
+            }
+
             TextView dialog_context = layout.findViewById( R.id.dialog_context );
             dialog_context.setText( comtext );
             Button dialog_button = layout.findViewById( R.id.dialog_button );

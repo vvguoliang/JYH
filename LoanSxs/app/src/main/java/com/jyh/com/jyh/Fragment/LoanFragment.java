@@ -115,7 +115,7 @@ public class LoanFragment extends BaseFragment implements View.OnClickListener {
         switch (v.getId()) {
             case R.id.loan_button:
                 DialogUtils.getInstance().getDialogPrompt( mActivity, "温馨提示",
-                        "您当前还未完善个人资料\n完善后即可申请借款", "完善资料" );
+                        "您当前还未完善个人资料\n完善后即可申请借款", "完善资料");
                 break;
         }
     }

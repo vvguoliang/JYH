@@ -54,11 +54,26 @@ public class DialogUtils {
         PublicPromptDialog.Builder builder = new PublicPromptDialog.Builder( context );
         builder.setTitle( title );
         builder.setContext( comtext );
+        builder.setMesse( "" );
         builder.setItems( buttonstring, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 Intent intent = new Intent( context, PersonalDataActivity.class );
                 context.startActivity( intent );
+                dialogInterface.dismiss();
+            }
+        } );
+        builder.create().show();
+    }
+
+    public void getDialogSuccess(final Context context, String title, String comtext, String buttonstring,String messe) {
+        PublicPromptDialog.Builder builder = new PublicPromptDialog.Builder( context );
+        builder.setTitle( title );
+        builder.setContext( comtext );
+        builder.setMesse( messe );
+        builder.setItems( buttonstring, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
                 dialogInterface.dismiss();
             }
         } );
@@ -71,7 +86,7 @@ public class DialogUtils {
         final BottomDialog bottomDialog = new BottomDialog( context, R.layout.dialog_buttom_listview );
         bottomDialog.getWindow().setWindowAnimations( R.style.AnimBottom );
         bottomDialog.setWidthHeight( AppUtil.getInstance().Dispay( context )[0],
-                DisplayUtils.dip2px( context, AppUtil.getInstance().Dispay( context )[1] / 6 ) );
+                DisplayUtils.dip2px( context, AppUtil.getInstance().Dispay( context )[1] / 10 ) );
         bottomDialog.getWindow().setGravity( Gravity.BOTTOM );
 
         final List<Map<String, Object>> mapList;
