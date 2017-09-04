@@ -77,4 +77,10 @@
     <string name="loan_name_loan_bank_number">银行卡号</string>
     <string name="loan_name_loan_bank_hint_number">请输入您的银行卡号</string>
     <string name="loan_name_loan_bank">绑定银行卡</string>
+    <string name="loan_name_loan_help">帮助中心</string>
+    <string name="loan_name_loan_password">修改密码</string>
+    <string name="loan_name_loan_law">法律知识</string>
+    <string name="loan_name_loan_we">关于我们</string>
+    <string name="loan_name_loan_customer">联系客服</string>
+    <string name="loan_name_loan_my_bank">收款银行卡</string>
 </resources>

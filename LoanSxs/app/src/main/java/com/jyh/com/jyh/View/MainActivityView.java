@@ -82,11 +82,11 @@ public class MainActivityView extends LinearLayout {
         this.unSelectedImage = unSelectedImage;
         setOrientation( LinearLayout.HORIZONTAL );
         if (screenWidth > 720) {
-            text_size = DisplayUtils.px2dip( context, 20 ) * 16 / 9;
+            text_size = DisplayUtils.px2dip( context, 20 ) * 16 / 9 + 2;
         } else if (screenWidth <= 720 && screenWidth > 480) {
-            text_size = DisplayUtils.px2dip( context, 20 ) * 16 / 9 - 5;
+            text_size = DisplayUtils.px2dip( context, 20 ) * 16 / 9 - 3;
         } else if (screenWidth <= 480) {
-            text_size = DisplayUtils.px2dip( context, 20 ) * 16 / 9 - 23;
+            text_size = DisplayUtils.px2dip( context, 20 ) * 16 / 9 - 20;
         }
         if (titles != null && titles.length != 0) {
             int widthScale = screenWidth / titles.length;

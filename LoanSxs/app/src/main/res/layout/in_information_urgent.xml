@@ -89,10 +89,10 @@
                 android:id="@+id/information_urgent_name_image"
                 android:layout_width="10dp"
                 android:layout_height="@dimen/common_18dp"
-                android:visibility="gone"
                 android:layout_gravity="center"
                 android:layout_marginRight="@dimen/common_10dp"
-                android:src="@mipmap/ic_personal_data_information_error" />
+                android:src="@mipmap/ic_personal_data_information_error"
+                android:visibility="gone" />
 
 
         </LinearLayout>
@@ -136,8 +136,8 @@
 
             <ImageView
                 android:id="@+id/information_urgent_phone_image"
-                android:layout_width="@dimen/common_20dp"
-                android:layout_height="@dimen/common_20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginRight="@dimen/common_10dp"
                 android:src="@mipmap/ic_person_data_mail" />
@@ -227,10 +227,10 @@
                 android:id="@+id/information_urgent_name_colleague_image"
                 android:layout_width="8dp"
                 android:layout_height="@dimen/common_18dp"
-                android:visibility="gone"
                 android:layout_gravity="center"
                 android:layout_marginRight="@dimen/common_10dp"
-                android:src="@mipmap/ic_personal_data_information_error" />
+                android:src="@mipmap/ic_personal_data_information_error"
+                android:visibility="gone" />
 
         </LinearLayout>
 
@@ -273,8 +273,8 @@
 
             <ImageView
                 android:id="@+id/information_urgent_phone_colleague_image"
-                android:layout_width="17dp"
-                android:layout_height="@dimen/common_20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginRight="@dimen/common_10dp"
                 android:src="@mipmap/ic_person_data_mail" />
